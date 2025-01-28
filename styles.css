@@ -1,0 +1,85 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+    --light-grey: #f5f6f7;
+    --middle-grey: #213549;
+    --dark-blue: #1a1a36;
+    --orange: #f1be32;
+  }
+
+body {
+    background-color: var(--dark-blue);
+    font-family: Liberation Serif, Lucida Console,
+    monospace;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--light-grey);
+}
+
+
+  h1 {    
+    font-size: 2.125rem;
+    text-align: center;
+    margin: 20px 0;
+    text-transform: uppercase;
+    padding: 0 4px;
+  }
+
+  .input-container {
+    border: 2px solid var(--light-grey);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    width: clamp(320px, 50vw, 460px);
+    margin: 10px auto;
+    padding: 2rem;
+    background-color: var(--middle-grey);
+  }
+  
+  .input-container label {
+    white-space: nowrap;
+    font-size: 1.7rem;
+  }
+  
+  .convert-btn {
+    margin: 1rem;
+    font-size: 1.7rem;
+    font-family: inherit;
+    background-color: var(--orange);
+    width: 100%;
+    padding: 5px 6px;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+  }
+  
+  .number-input {
+    font-size: 1.7rem;
+    height: 2.5rem;
+    padding: 0.7rem;
+    width: 100%;
+    background-color: var(--dark-blue);
+    border: 1px solid var(--light-grey);
+    color: var(--light-grey);
+  }
+
+  .output-container {
+    text-align: center;
+    width: clamp(320px, 50vw, 460px);
+    font-size: 1.7rem;
+    padding: 0.7rem;
+    margin: 1rem;
+    background-color: var(--middle-grey);
+    border: 1px solid var(--light-grey);
+    color: var(--light-grey);
+    display: none;
+  }
