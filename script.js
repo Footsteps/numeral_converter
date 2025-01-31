@@ -20,7 +20,7 @@ const checkUserInput = () => {
     return;
   }
   let input = number.value;
-  
+
   /*
   let romanNumeral = "";
   const numbers = {
@@ -49,38 +49,35 @@ const checkUserInput = () => {
  */
 
   let numbers = [
-    [1000, 'M'],
-    [900, 'CM'],
-    [500, 'D'],
-    [400, 'CD'],
-    [100, 'C'],
-    [90, 'XC'],
-    [50, 'L'],
-    [40, 'XL'],
-    [10, 'X'],
-    [9, 'IX'],
-    [5, 'V'],
-    [4, 'IV'],
-    [1, 'I']
-  ]
+    [1000, "M"],
+    [900, "CM"],
+    [500, "D"],
+    [400, "CD"],
+    [100, "C"],
+    [90, "XC"],
+    [50, "L"],
+    [40, "XL"],
+    [10, "X"],
+    [9, "IX"],
+    [5, "V"],
+    [4, "IV"],
+    [1, "I"],
+  ];
 
- const convert = (input) => {
-  if (input === 0) return "";
-  for (let i = 0; i < numbers.length; i++) {
-    if (input >= numbers[i][0]) {
-      return numbers[i][1] + convert(input - numbers[i][0]);
+  const convert = (input) => {
+    if (input === 0) return "";
+    for (let i = 0; i < numbers.length; i++) {
+      if (input >= numbers[i][0]) {
+        return numbers[i][1] + convert(input - numbers[i][0]);
+      }
     }
-  }
- }
+  };
 
-
-output.innerText = convert(input);
-
+  output.innerText = convert(input);
 
   output.style.display = "block";
   number.value = "";
   return;
-
 };
 
 //event listeners
